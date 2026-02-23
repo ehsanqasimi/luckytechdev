@@ -12,6 +12,8 @@ import {
   Github,
 } from "lucide-react";
 
+import Image from "next/image";
+
 /**
  * Define the structure for the navigation links in the footer columns.
  */
@@ -66,10 +68,12 @@ const Footer: React.FC = () => {
           {/* Company Info / Logo Column (First Column) */}
           <div className="col-span-2 lg:col-span-2 space-y-4 pr-8">
             <div className="flex items-center space-x-2">
-              <Zap className="h-6 w-6 text-indigo-600" />
-              <h3 className="text-xl font-extrabold text-gray-900 tracking-tight">
-                LuckTech<span className="text-indigo-600">Dev</span>
-              </h3>
+              <Image 
+                src="/logo.png"
+                alt="Lucky Tech Dev Logo"
+                width={40}
+                height={40}
+              />
             </div>
             <p className="text-sm text-gray-600">
               Crafting custom digital solutions that elevate your brand and

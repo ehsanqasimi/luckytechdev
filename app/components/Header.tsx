@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { ArrowRight, Menu, X, Zap } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 // Define the interface for a navigation item structure
 interface NavItem {
@@ -76,10 +77,13 @@ const Header: React.FC = () => {
           {/* Logo/Brand Name */}
           <Link href={"/"}>
             <div className="flex items-center space-x-2">
-              <Zap className="h-6 w-6 text-indigo-600" />
-              <h1 className="text-2xl font-extrabold text-gray-900 tracking-tight">
-                LuckyTech<span className="text-indigo-600">Dev</span>
-              </h1>
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                width={32}
+                height={32}
+                className="h-15 w-15 text-indigo-600"
+              />
             </div>
           </Link>
 
